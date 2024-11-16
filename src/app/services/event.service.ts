@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { Event } from '../models/event.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventService {
-  private mockData = [
+  private mockData: Event[] = [
     {
       deviceId: 'A23',
       eventDate: 1710355477,
@@ -34,7 +35,7 @@ export class EventService {
     },
   ];
 
-  fetchEvents(): Observable<any[]> {
-    return of(this.mockData); // Symulacja asynchronicznego pobierania danych
+  fetchEvents(): Observable<Event[]> {
+    return of(this.mockData);
   }
 }

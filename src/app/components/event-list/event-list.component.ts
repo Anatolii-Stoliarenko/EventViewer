@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EventService } from '../event.service';
+import { EventService } from '../../services/event.service';
 import { CommonModule } from '@angular/common';
+import { Event } from '../../models/event.model';
 
 @Component({
   selector: 'app-event-list',
@@ -9,9 +10,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class EventListComponent implements OnInit {
-  events: any[] = [];
-  selectedEvent: any = null; // Przechowuje wybrane zdarzenie
-  showModal: boolean = false; // Kontroluje widoczność modala
+  events: Event[] = [];
+  selectedEvent: any = null;
+  showModal: boolean = false;
 
   constructor(private eventService: EventService) {}
 
