@@ -52,8 +52,6 @@ src/
 
 ## Instalacja i uruchomienie
 
----
-
 1. **Klonowanie repozytorium**
 
    ```bash
@@ -61,13 +59,11 @@ src/
    cd EventViewer
    ```
 
----
-
 2. **Instalacja zależności**
+
    ```bash
    npm install
    ```
----
 
 3. **Uruchomienie aplikacji**
 
@@ -88,9 +84,9 @@ Aplikacja będzie dostępna pod adresem http://localhost:4200/.
 
 ## Dalszy rozwój
 
-. Walidacje danych: Możliwość dodania walidacji i filtrowania niekompletnych danych.
-. Współdzielone komponenty: Możliwość refaktoryzacji kodu w celu wydzielenia komponentów do folderu shared.
-. Testy jednostkowe: Dodanie testów dla komponentów i usług.
+- **Walidacje** danych: Możliwość dodania walidacji i filtrowania niekompletnych danych.
+- **Współdzielone** komponenty: Możliwość refaktoryzacji kodu w celu wydzielenia komponentów do folderu shared.
+- **Testy** jednostkowe: Dodanie testów dla komponentów i usług.
 
 ---
 
