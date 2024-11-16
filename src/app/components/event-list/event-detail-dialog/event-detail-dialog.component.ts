@@ -9,9 +9,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-event-detail-dialog',
   standalone: true,
-  imports: [CommonModule, MatDialogModule],
   templateUrl: './event-detail-dialog.component.html',
   styleUrls: ['./event-detail-dialog.component.scss'],
+  imports: [CommonModule, MatDialogModule],
 })
 export class EventDetailDialogComponent {
   constructor(
@@ -20,6 +20,6 @@ export class EventDetailDialogComponent {
   ) {}
 
   close(): void {
-    this.dialogRef.close(); // Zamknięcie dialogu
+    this.dialogRef.close();
   }
 }

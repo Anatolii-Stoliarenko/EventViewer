@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+
 import { Event } from '../models/event.model';
 
 @Injectable({
@@ -14,6 +15,15 @@ export class EventService {
       evtData: {
         reasonCode: 12,
         reasonText: 'temp sensor not responding',
+      },
+    },
+    {
+      deviceId: 'A23',
+      eventDate: 1710354477,
+      type: 'deviceMalfunction',
+      evtData: {
+        reasonCode: 11,
+        reasonText: 'no power',
       },
     },
     {

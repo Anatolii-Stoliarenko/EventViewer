@@ -1,7 +1,7 @@
 export interface Event {
   deviceId: string;
   eventDate: number;
-  type: 'deviceMalfunction' | 'temperatureExceeded' | 'doorUnlocked'; // Enum lub literały
+  type: 'deviceMalfunction' | 'temperatureExceeded' | 'doorUnlocked';
   evtData: DeviceMalfunctionData | TemperatureExceededData | DoorUnlockedData;
 }
 

@@ -1,29 +1,111 @@
+<!-- prettier-ignore-start -->
 # EventViewer
 
-A web application to visualize and manage IoT events with detailed insights and interactions
+## Opis projektu
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+EventViewer to aplikacja webowa stworzona w Angular, której celem jest wyświetlanie danych z urządzeń IoT w formie listy zdarzeń. Każde zdarzenie można przeglądać bardziej szczegółowo dzięki funkcji wyświetlania szczegółów w dialogu. Projekt wykorzystuje Angular Material do tworzenia responsywnych i estetycznych interfejsów użytkownika.
 
-## Development server
+## Funkcjonalności
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Lista zdarzeń**: Wyświetlanie danych w tabeli z numeracją, paginacją i możliwością filtrowania.
+- **Szczegóły zdarzenia**: Wyświetlanie szczegółowych danych każdego zdarzenia w dialogu.
+- **Paginacja**: Wbudowana obsługa paginacji dla dużej ilości danych z `MatPaginator`.
+- **Obsługa dynamicznych danych**: Dane pobierane za pomocą `EventService`.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologie i biblioteki
 
-## Build
+- **Angular** - Framework do budowy aplikacji webowych.
+- **Angular Material** - Komponenty Material Design dla lepszego UI/UX.
+- **RxJS** - Przetwarzanie asynchroniczne.
+- **TypeScript** - Język programowania będący nadzbiorem JavaScript, umożliwiający typowanie i wiele więcej.
+- **SCSS** - Preprocesor CSS dla lepszego zarządzania stylami.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Struktura projektu
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```plaintext
+src/
+├── app/
+│   ├── components/
+│   │   └── event-list/
+│   │       ├── event-detail-dialog/
+│   │       │   ├── event-detail-dialog.component.html  // HTML for event detail dialog
+│   │       │   ├── event-detail-dialog.component.scss  // Styles for event detail dialog
+│   │       │   └── event-detail-dialog.component.ts    // Logic for event detail dialog
+│   │       ├── event-list.component.html               // HTML for event list component
+│   │       ├── event-list.component.scss               // Styles for event list component
+│   │       └── event-list.component.ts                 // Logic for event list component
+│   ├── models/
+│   │   └── event.model.ts                              // Event data model
+│   ├── services/
+│   │   └── event.service.ts                            // Service for fetching events
+│   ├── app.component.html                              // Main app HTML
+│   ├── app.component.ts                                // Main app component logic
+│   ├── index.html                                      // Main HTML entry point
+│   ├── main.ts                                         // Main TypeScript entry point
+│   └── styles.scss                                     // Global styles
+└── public/                                             // Assets (e.g., images, fonts)
+```
 
-## Running end-to-end tests
+## Instalacja i uruchomienie
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+1. **Klonowanie repozytorium**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   ```bash
+   git clone https://github.com/Anatolii-Stoliarenko/EventViewer.git
+   cd EventViewer
+   ```
+
+---
+
+2. **Instalacja zależności**
+   ```bash
+   npm install
+   ```
+---
+
+3. **Uruchomienie aplikacji**
+
+   ```bash
+   ng serve
+   ```
+Aplikacja będzie dostępna pod adresem http://localhost:4200/.
+
+---
+
+## Sposób działania
+
+1. Po uruchomieniu aplikacji wyświetlana jest tabela z listą zdarzeń.
+2. Użytkownik może kliknąć przycisk Szczegóły, aby wyświetlić dialog z dodatkowymi informacjami o wybranym zdarzeniu.
+3. Wbudowana paginacja umożliwia przechodzenie pomiędzy stronami wyników.
+
+---
+
+## Dalszy rozwój
+
+. Walidacje danych: Możliwość dodania walidacji i filtrowania niekompletnych danych.
+. Współdzielone komponenty: Możliwość refaktoryzacji kodu w celu wydzielenia komponentów do folderu shared.
+. Testy jednostkowe: Dodanie testów dla komponentów i usług.
+
+---
+
+## Licencja
+
+Plik LICENSE zawiera informacje dotyczące licencji projektu.
+
+---
+
+## Kontakt
+
+Jeśli masz jakiekolwiek pytania dotyczące projektu lub jego konfiguracji, skontaktuj się poprzez:
+
+1. **Email**: [anatolii.stoliarenko@gmail.com](mailto:anatolii.stoliarenko@gmail.com)
+2. **Strona**: [https://anatolii-stoliarenko.webflow.io/](https://anatolii-stoliarenko.webflow.io/)
+
+
+<!-- prettier-ignore-end -->

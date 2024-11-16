@@ -1,0 +1,28 @@
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.dialog-content {
+  margin-bottom: 12px;
+}
+
+.dialog-content-main-section {
+  margin-bottom: 8px;
+}
+
+.dialog-content-detail-section {
+  margin-left: 4px;
+  padding-left: 4px;
+  border-left: 3px solid #1976d2;
+}
+.dialog-content-dialog-actions {
+  display: flex;
+  justify-content: center;
+}
