@@ -18,35 +18,3 @@
     </tr>
   </tbody>
 </table>
-
-<div *ngIf="showModal" class="modal-overlay">
-  <div class="modal">
-    <h3>Event Details</h3>
-    <p><strong>Device ID:</strong> {{ selectedEvent.deviceId }}</p>
-    <p><strong>Event Date:</strong> {{ selectedEvent.eventDate }}</p>
-    <p><strong>Type:</strong> {{ selectedEvent.type }}</p>
-
-    <!-- Wyświetlanie dodatkowych danych w zależności od typu -->
-    <div *ngIf="selectedEvent.type === 'deviceMalfunction'">
-      <p>
-        <strong>Reason Code:</strong> {{ selectedEvent.evtData.reasonCode }}
-      </p>
-      <p>
-        <strong>Reason Text:</strong> {{ selectedEvent.evtData.reasonText }}
-      </p>
-    </div>
-    <div *ngIf="selectedEvent.type === 'temperatureExceeded'">
-      <p><strong>Temperature:</strong> {{ selectedEvent.evtData.temp }} °C</p>
-      <p>
-        <strong>Threshold:</strong> {{ selectedEvent.evtData.threshold }} °C
-      </p>
-    </div>
-    <div *ngIf="selectedEvent.type === 'doorUnlocked'">
-      <p>
-        <strong>Unlock Date:</strong> {{ selectedEvent.evtData.unlockDate }}
-      </p>
-    </div>
-
-    <button (click)="closeModal()">Close</button>
-  </div>
-</div>
