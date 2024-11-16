@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Device ID</th>
+      <th>Event Date</th>
+      <th>Type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events">
+      <td>{{ event.deviceId }}</td>
+      <td>{{ event.eventDate }}</td>
+      <td>{{ event.type }}</td>
+      <td>
+        <button (click)="onViewDetails(event)">Szczegóły</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
