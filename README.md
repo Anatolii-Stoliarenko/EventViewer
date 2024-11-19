@@ -1,30 +1,32 @@
 <!-- prettier-ignore-start -->
 # EventViewer
 
-## Opis projektu
+**Polska wersja**: Zobacz [README.pl.md](README.pl.md)
 
-EventViewer to aplikacja webowa stworzona w Angular, której celem jest wyświetlanie danych z urządzeń IoT w formie listy zdarzeń. Każde zdarzenie można przeglądać bardziej szczegółowo dzięki funkcji wyświetlania szczegółów w dialogu. Projekt wykorzystuje Angular Material do tworzenia responsywnych i estetycznych interfejsów użytkownika.
+## Project Description
 
-## Funkcjonalności
+EventViewer is a web application built with Angular, designed to display data from IoT devices in the form of an event list. Each event can be viewed in more detail using a dialog display function. The project utilizes Angular Material to create responsive and visually appealing user interfaces.
 
-- **Lista zdarzeń**: Wyświetlanie danych w tabeli z numeracją, paginacją i możliwością filtrowania.
-- **Szczegóły zdarzenia**: Wyświetlanie szczegółowych danych każdego zdarzenia w dialogu.
-- **Paginacja**: Wbudowana obsługa paginacji dla dużej ilości danych z `MatPaginator`.
-- **Obsługa dynamicznych danych**: Dane pobierane za pomocą `EventService`.
+## Features
 
----
-
-## Technologie i biblioteki
-
-- **Angular** - Framework do budowy aplikacji webowych.
-- **Angular Material** - Komponenty Material Design dla lepszego UI/UX.
-- **RxJS** - Przetwarzanie asynchroniczne.
-- **TypeScript** - Język programowania będący nadzbiorem JavaScript, umożliwiający typowanie i wiele więcej.
-- **SCSS** - Preprocesor CSS dla lepszego zarządzania stylami.
+- **Event List**: Displays data in a table with numbering, pagination, and filtering capabilities.
+- **Event Details**: Shows detailed data for each event in a dialog.
+- **Pagination**: Built-in pagination support for large data sets using `MatPaginator`.
+- **Dynamic Data Handling**: Data is fetched using `EventService`.
 
 ---
 
-## Struktura projektu
+## Technologies and Libraries
+
+- **Angular** - Framework for building web applications.
+- **Angular Material** - Material Design components for better UI/UX.
+- **RxJS** - Asynchronous processing.
+- **TypeScript** - A superset of JavaScript enabling typing and more.
+- **SCSS** - CSS preprocessor for better style management.
+
+---
+
+## Project Structure
 
 ```plaintext
 src/
@@ -50,58 +52,58 @@ src/
 └── public/                                             // Assets (e.g., images, fonts)
 ```
 
-## Instalacja i uruchomienie
+## Installation and Setup
 
-1. **Klonowanie repozytorium**
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/Anatolii-Stoliarenko/EventViewer.git
    cd EventViewer
    ```
 
-2. **Instalacja zależności**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Uruchomienie aplikacji**
+3. **Run the application**
 
    ```bash
    ng serve
    ```
-Aplikacja będzie dostępna pod adresem http://localhost:4200/.
+The application will be available at http://localhost:4200/.
 
 ---
 
-## Sposób działania
+## How It Works
 
-1. Po uruchomieniu aplikacji wyświetlana jest tabela z listą zdarzeń.
-2. Użytkownik może kliknąć przycisk Szczegóły, aby wyświetlić dialog z dodatkowymi informacjami o wybranym zdarzeniu.
-3. Wbudowana paginacja umożliwia przechodzenie pomiędzy stronami wyników.
-
----
-
-## Dalszy rozwój
-
-- **Walidacje** danych: Możliwość dodania walidacji i filtrowania niekompletnych danych.
-- **Współdzielone** komponenty: Możliwość refaktoryzacji kodu w celu wydzielenia komponentów do folderu shared.
-- **Testy** jednostkowe: Dodanie testów dla komponentów i usług.
+1. Upon starting the application, a table displaying the list of events is shown.
+2. The user can click the Details button to display a dialog with additional information about the selected event.
+3. Built-in pagination allows navigation between pages of results.
 
 ---
 
-## Licencja
+## Future Development
 
-Plik LICENSE zawiera informacje dotyczące licencji projektu.
+- **Data Validation**: Possibility to add validation and filtering of incomplete data.
+- **Shared Components**: Option to refactor code to separate components into a shared folder.
+- **Unit Testing**: Adding tests for components and services.
 
 ---
 
-## Kontakt
+## License
 
-Jeśli masz jakiekolwiek pytania dotyczące projektu lub jego konfiguracji, skontaktuj się poprzez:
+The LICENSE file contains information regarding the project's license.
+
+---
+
+## Contact
+
+If you have any questions about the project or its setup, contact via:
 
 1. **Email**: [anatolii.stoliarenko@gmail.com](mailto:anatolii.stoliarenko@gmail.com)
-2. **Strona**: [https://anatolii-stoliarenko.webflow.io/](https://anatolii-stoliarenko.webflow.io/)
+2. **Website**: [https://anatolii-stoliarenko.webflow.io/](https://anatolii-stoliarenko.webflow.io/)
 
 
 <!-- prettier-ignore-end -->
