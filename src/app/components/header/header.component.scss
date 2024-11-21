@@ -1,0 +1,69 @@
+$primary: #199fca;
+$secondary: #ba6197;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 5px;
+  background-image: linear-gradient(90deg, $primary, $secondary);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 5vw;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.github-icon {
+  height: 18px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header__link-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: auto;
+  color: white;
+}
+
+.header__logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.header__nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header__nav a:hover {
+  text-decoration: underline;
+}

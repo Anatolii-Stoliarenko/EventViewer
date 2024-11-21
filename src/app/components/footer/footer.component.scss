@@ -1,0 +1,21 @@
+$primary: #199fca;
+$secondary: #ba6197;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-image: linear-gradient(90deg, $primary, $secondary);
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

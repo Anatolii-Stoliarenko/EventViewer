@@ -1,6 +1,8 @@
 <!-- prettier-ignore-start -->
 # EventViewer
 
+[**See the application in action here**](https://event-viewer-omega.vercel.app/)
+
 **Polska wersja**: Zobacz [README.pl.md](README.pl.md)
 
 ## Project Description
@@ -32,24 +34,33 @@ EventViewer is a web application built with Angular, designed to display data fr
 src/
 ├── app/
 │   ├── components/
-│   │   └── event-list/
-│   │       ├── event-detail-dialog/
-│   │       │   ├── event-detail-dialog.component.html  // HTML for event detail dialog
-│   │       │   ├── event-detail-dialog.component.scss  // Styles for event detail dialog
-│   │       │   └── event-detail-dialog.component.ts    // Logic for event detail dialog
-│   │       ├── event-list.component.html               // HTML for event list component
-│   │       ├── event-list.component.scss               // Styles for event list component
-│   │       └── event-list.component.ts                 // Logic for event list component
+│   │   ├── event-list/
+│   │   │   ├── event-detail-dialog/
+│   │   │   │   ├── event-detail-dialog.component.html   // HTML for event detail dialog
+│   │   │   │   ├── event-detail-dialog.component.scss   // Styles for event detail dialog
+│   │   │   │   └── event-detail-dialog.component.ts     // Logic for event detail dialog
+│   │   │   ├── event-list.component.html                // HTML for event list component
+│   │   │   ├── event-list.component.scss                // Styles for event list component
+│   │   │   └── event-list.component.ts                  // Logic for event list component
+│   │   ├── footer/
+│   │   │   ├── footer.component.html                    // HTML for footer
+│   │   │   ├── footer.component.scss                    // Styles for footer
+│   │   │   └── footer.component.ts                      // Logic for footer
+│   │   ├── header/
+│   │   │   ├── header.component.html                    // HTML for header
+│   │   │   ├── header.component.scss                    // Styles for header
+│   │   │   └── header.component.ts                      // Logic for header
 │   ├── models/
-│   │   └── event.model.ts                              // Event data model
+│   │   └── event.model.ts                               // Event data model
 │   ├── services/
-│   │   └── event.service.ts                            // Service for fetching events
-│   ├── app.component.html                              // Main app HTML
-│   ├── app.component.ts                                // Main app component logic
-│   ├── index.html                                      // Main HTML entry point
-│   ├── main.ts                                         // Main TypeScript entry point
-│   └── styles.scss                                     // Global styles
-└── public/                                             // Assets (e.g., images, fonts)
+│   │   └── event.service.ts                             // Service for fetching events
+│   ├── app.component.html                               // Main app HTML
+│   ├── app.component.scss                               // Main app styles
+│   ├── app.component.ts                                 // Main app component logic
+│   ├── index.html                                       // Main HTML entry point
+│   ├── main.ts                                          // Main TypeScript entry point
+│   └── styles.scss                                      // Global styles
+└── public/                                              // Assets (e.g., images, fonts)
 ```
 
 ## Installation and Setup
