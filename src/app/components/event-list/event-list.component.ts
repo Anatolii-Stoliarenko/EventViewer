@@ -37,10 +37,10 @@ export class EventListComponent implements OnInit {
   constructor(private eventService: EventService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.initValuesNew();
+    this.initValues();
   }
 
-  initValuesNew(): void {
+  initValues(): void {
     this.eventService.getData().subscribe((data) => {
       this.events = data;
       this.dataSource.data = data;
@@ -51,7 +51,7 @@ export class EventListComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  openDialogDetails(event: any): void {
+  openDialogDetails(event: Event<keyof EventDataMap>): void {
     this.dialog.open(EventDetailDialogComponent, {
       data: event,
       maxWidth: '300px',

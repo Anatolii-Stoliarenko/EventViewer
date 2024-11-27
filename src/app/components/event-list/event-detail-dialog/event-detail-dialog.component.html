@@ -1,18 +1,18 @@
 <div class="dialog-container">
   <h2><strong>Event Details</strong></h2>
   <div class="dialog-content">
-    <!-- Common data -->
+    <!-- Общие данные -->
     <div class="dialog-content-main-section">
       <p><strong>Device ID:</strong> {{ data.deviceId }}</p>
       <p><strong>Event Date:</strong> {{ data.eventDate }}</p>
       <p><strong>Type:</strong> {{ data.type }}</p>
     </div>
 
-    <!-- evtData -->
+    <!-- Динамическое отображение данных из evtData -->
     <div class="dialog-content-detail-section">
-      <div *ngFor="let field of getEvtDataFields(data.evtData)">
+      <div *ngFor="let key of getKeys(data.evtData)">
         <p>
-          <strong>{{ field.label }}:</strong> {{ field.value }}
+          <strong>{{ key }}:</strong> {{ data.evtData[key] }}
         </p>
       </div>
     </div>

@@ -17,11 +17,8 @@ export class EventService {
       eventDate: 1710355477,
       type: 'deviceMalfunction',
       evtData: {
-        reasonCode: { label: 'Reason Code', value: 12 },
-        reasonText: {
-          label: 'Reason Text',
-          value: 'Temp sensor not responding',
-        },
+        reasonCode: 12,
+        reasonText: 'temp sensor not responding',
       },
     },
     {
@@ -29,8 +26,8 @@ export class EventService {
       eventDate: 1710354477,
       type: 'deviceMalfunction',
       evtData: {
-        reasonCode: { label: 'Reason Code', value: 11 },
-        reasonText: { label: 'Reason Text', value: 'no power' },
+        reasonCode: 11,
+        reasonText: 'no power',
       },
     },
     {
@@ -38,8 +35,8 @@ export class EventService {
       eventDate: 1710353477,
       type: 'temperatureExceeded',
       evtData: {
-        temp: { label: 'Temperature', value: 10.3 },
-        threshold: { label: 'Threshold', value: 8.5 },
+        temp: 10.3,
+        threshold: 8.5,
       },
     },
     {
@@ -47,7 +44,7 @@ export class EventService {
       eventDate: 1710352477,
       type: 'doorUnlocked',
       evtData: {
-        unlockDate: { label: 'Unlock Date', value: 1710350477 },
+        unlockDate: 1710350477,
       },
     },
   ];

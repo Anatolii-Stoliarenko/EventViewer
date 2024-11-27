@@ -19,10 +19,8 @@ export class EventDetailDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  getEvtDataFields(
-    evtData: Record<string, { label: string; value: any }>
-  ): { label: string; value: any }[] {
-    return Object.values(evtData);
+  getKeys<T extends object>(obj: T): (keyof T)[] {
+    return Object.keys(obj) as (keyof T)[];
   }
 
   close(): void {
