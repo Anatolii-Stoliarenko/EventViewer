@@ -4,7 +4,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
-import { Event } from '../../models/event.model';
+import { EventDataMap, Event } from '../../models/event.model';
 import { EventDetailDialogComponent } from './event-detail-dialog/event-detail-dialog.component';
 import { EventService } from '../../services/event.service';
 
@@ -29,26 +29,26 @@ export class EventListComponent implements OnInit {
     'type',
     'action',
   ];
-  events: Event[] = [];
-  dataSource = new MatTableDataSource<Event>(this.events);
+  events: Event<keyof EventDataMap>[] = [];
+  dataSource = new MatTableDataSource<Event<keyof EventDataMap>>(this.events);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private eventService: EventService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.initValues();
+    this.initValuesNew();
+  }
+
+  initValuesNew(): void {
+    this.eventService.getData().subscribe((data) => {
+      this.events = data;
+      this.dataSource.data = data;
+    });
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
-
-  initValues(): void {
-    this.eventService.fetchEvents().subscribe((data) => {
-      this.events = data;
-      this.dataSource.data = data;
-    });
   }
 
   openDialogDetails(event: any): void {

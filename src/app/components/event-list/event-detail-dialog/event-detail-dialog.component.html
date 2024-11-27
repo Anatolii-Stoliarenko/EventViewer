@@ -1,31 +1,20 @@
 <div class="dialog-container">
   <h2><strong>Event Details</strong></h2>
   <div class="dialog-content">
+    <!-- Common data -->
     <div class="dialog-content-main-section">
       <p><strong>Device ID:</strong> {{ data.deviceId }}</p>
       <p><strong>Event Date:</strong> {{ data.eventDate }}</p>
       <p><strong>Type:</strong> {{ data.type }}</p>
     </div>
 
-    <div
-      *ngIf="data.type === 'deviceMalfunction'"
-      class="dialog-content-detail-section"
-    >
-      <p><strong>Reason Code:</strong> {{ data.evtData.reasonCode }}</p>
-      <p><strong>Reason Text:</strong> {{ data.evtData.reasonText }}</p>
-    </div>
-    <div
-      *ngIf="data.type === 'temperatureExceeded'"
-      class="dialog-content-detail-section"
-    >
-      <p><strong>Temperature:</strong> {{ data.evtData.temp }} °C</p>
-      <p><strong>Threshold:</strong> {{ data.evtData.threshold }} °C</p>
-    </div>
-    <div
-      *ngIf="data.type === 'doorUnlocked'"
-      class="dialog-content-detail-section"
-    >
-      <p><strong>Unlock Date:</strong> {{ data.evtData.unlockDate }}</p>
+    <!-- evtData -->
+    <div class="dialog-content-detail-section">
+      <div *ngFor="let field of getEvtDataFields(data.evtData)">
+        <p>
+          <strong>{{ field.label }}:</strong> {{ field.value }}
+        </p>
+      </div>
     </div>
   </div>
 

@@ -1,20 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Event } from '../models/event.model';
+import { EventDataMap, Event } from '../models/event.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventService {
-  private mockData: Event[] = [
+  getData(): Observable<Event<keyof EventDataMap>[]> {
+    return of(this.mockEvents);
+  }
+
+  mockEvents: Event<keyof EventDataMap>[] = [
     {
       deviceId: 'A23',
       eventDate: 1710355477,
       type: 'deviceMalfunction',
       evtData: {
-        reasonCode: 12,
-        reasonText: 'temp sensor not responding',
+        reasonCode: { label: 'Reason Code', value: 12 },
+        reasonText: {
+          label: 'Reason Text',
+          value: 'Temp sensor not responding',
+        },
       },
     },
     {
@@ -22,8 +29,8 @@ export class EventService {
       eventDate: 1710354477,
       type: 'deviceMalfunction',
       evtData: {
-        reasonCode: 11,
-        reasonText: 'no power',
+        reasonCode: { label: 'Reason Code', value: 11 },
+        reasonText: { label: 'Reason Text', value: 'no power' },
       },
     },
     {
@@ -31,8 +38,8 @@ export class EventService {
       eventDate: 1710353477,
       type: 'temperatureExceeded',
       evtData: {
-        temp: 10.3,
-        threshold: 8.5,
+        temp: { label: 'Temperature', value: 10.3 },
+        threshold: { label: 'Threshold', value: 8.5 },
       },
     },
     {
@@ -40,12 +47,8 @@ export class EventService {
       eventDate: 1710352477,
       type: 'doorUnlocked',
       evtData: {
-        unlockDate: 1710350477,
+        unlockDate: { label: 'Unlock Date', value: 1710350477 },
       },
     },
   ];
-
-  fetchEvents(): Observable<Event[]> {
-    return of(this.mockData);
-  }
 }

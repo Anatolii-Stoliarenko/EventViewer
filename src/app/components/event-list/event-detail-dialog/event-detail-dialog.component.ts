@@ -19,6 +19,12 @@ export class EventDetailDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
+  getEvtDataFields(
+    evtData: Record<string, { label: string; value: any }>
+  ): { label: string; value: any }[] {
+    return Object.values(evtData);
+  }
+
   close(): void {
     this.dialogRef.close();
   }

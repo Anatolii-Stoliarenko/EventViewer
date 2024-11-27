@@ -1,20 +1,26 @@
-export interface Event {
+export interface Event<T extends keyof EventDataMap> {
   deviceId: string;
   eventDate: number;
-  type: 'deviceMalfunction' | 'temperatureExceeded' | 'doorUnlocked';
-  evtData: DeviceMalfunctionData | TemperatureExceededData | DoorUnlockedData;
+  type: T;
+  evtData: EventDataMap[T];
 }
 
 export interface DeviceMalfunctionData {
-  reasonCode: number;
-  reasonText: string;
+  reasonCode: { label: string; value: number };
+  reasonText: { label: string; value: string };
 }
 
 export interface TemperatureExceededData {
-  temp: number;
-  threshold: number;
+  temp: { label: string; value: number };
+  threshold: { label: string; value: number };
 }
 
 export interface DoorUnlockedData {
-  unlockDate: number;
+  unlockDate: { label: string; value: number };
+}
+
+export interface EventDataMap {
+  deviceMalfunction: DeviceMalfunctionData;
+  temperatureExceeded: TemperatureExceededData;
+  doorUnlocked: DoorUnlockedData;
 }
